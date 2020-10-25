@@ -3,6 +3,13 @@ $(document).ready(function () {
     $('select').material_select();
 });
 
+//ap js site
+let header = document.querySelector(".header");
+
+window.addEventListener("scroll", function () {  
+    let windowPosition = window.scrollY > 0;
+    header.classList.toggle("active", windowPosition);
+});
 
 document.querySelector('#submit').addEventListener("click", (e) => {
     e.preventDefault();

@@ -19,7 +19,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "the_twelve_back-end"
+  database: "the_twelve_back-end" 
 });
 connection.connect(function(err) {
   console.log("Connected to database!");
