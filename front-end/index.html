@@ -1,0 +1,360 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Înscriere ITEco Job Fest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
+    <link rel="shortcut icon"  href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="formular.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="component.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <script src="modernizr.custom.js" defer></script>
+</head>
+<body>
+    <div class="form-content" id="form">
+        <form id="register_form" name="register_form" method="post" enctype="multipart/form-data">
+            <div class="textform">
+                <h2 class="form-signin-heading flow-text titlu">Înscriere <strong><b>ITEco</b></strong> Job Fest</b></h2><br>
+    
+            </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" required="" aria-required="true" class="form-control validate" id="nume" name="nume" pattern="^([^0-9]*)$" title="Folosiţi doar litere."><br>
+                        <label for="nume">Nume<span class="red-text active"> *</span></label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input type="text" required="" aria-required="true" class="form-control validate" id="prenume" name="prenume" pattern="^([^0-9]*)$" title="Folosiţi doar litere."><br>
+                        <label for="prenume">Prenume<span class="red-text"> *</span></label>
+                    </div>
+                </div>
+    
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">phone</i>
+                    <input type="text" required="" aria-required="true" class="form-control validate" id="telefon" name="telefon" pattern="^[0-9]{10}$" title="Folosiţi doar cifre."><br>
+                    <label for="telefon">Număr de telefon<span class="red-text"> *</span></label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">email</i>
+                    <input type="text" required="" aria-required="true" class="form-control validate" id="email" name="email"><br>
+                    <label for="email" data-error="Completeaza" data-success="Corect">E-mail<span class="red-text"> *</span></label>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_balance</i>
+                    <select id="facultate" name="facultate" aria-required="true" oninvalid="this.setCustomValidity('Alegeţi facultatea din care faci parte')" oninput="setCustomValidity('')"
+                            class="form-control validate">
+                        <option value="" disabled selected>Alege</option>
+                        <option value="1">Facultatea de Administrarea Afacerilor, cu predare în limbi strâine</option>
+                        <option value="2">Facultatea de Administrație si Management Public</option>
+                        <option value="3">Bucharest Business School (Școala de Afaceri)</option>
+                        <option value="4">Facultatea de Business si Turism</option>
+                        <option value="5">Facultatea de Cibernetică, Statistică și Informatică Economică</option>
+                        <option value="6">Facultatea de Contabilitate si Informatică de Gestiune</option>
+                        <option value="7">Facultatea de Administrație si Management Public</option>
+                        <option value="8">Facultatea de Drept</option>
+                        <option value="9">Facultatea de Economie Teoretică și Aplicată</option>
+                        <option value="10">Facultatea de Economie Agroalimentară și a Mediului</option>
+                        <option value="11">Facultatea de Finanțe, Asigurări, Bânci și Burse de Valori</option>
+                        <option value="12">Facultatea de Management</option>
+                        <option value="13">Facultatea de Marketing</option>
+                        <option value="14">Facultatea de Relații Economice Internaționale</option>
+                     </select>
+                     <label style="font-size:16px" for="facultate">Facultate<span class="red-text"> *</span></label>
+                 </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">school</i>
+                    <select id="an" name="an" aria-required="true" oninvalid="this.setCustomValidity('Alegeţi un an')" oninput="setCustomValidity('')"
+                            class="form-control validate">
+                        <option value="" disabled selected>Alege</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">M1</option>
+                        <option value="5">M2</option>
+                        <option value="6">An suplimentar</option>
+                        
+                    </select>
+                    <label style="font-size:18px" for="an">An de studiu<span class="red-text"> *</span></label>
+                </div>
+            </div>
+    
+    
+    
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class ="material-icons prefix">thumb_up</i>
+                    <input type="text" required="" aria-required="true" oninput="setCustomValidity('')" class="form-control validate" id="facebook" name="facebook" pattern="^(https?:\/\/){0,1}(www\.){0,1}(?:(facebook)|(fb)|(m.facebook)|(m.fb)|(web.fb)|(web.facebook)){0,1}\.com\/[\w.\?=\/\w.]{2,}" title="Introduceţi o adresă validă."><br>
+                    <label for="facebook" data-error="Completeaza" data-success="Corect">Link Facebook<span class="red-text"> *</span></label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">work</i>
+                    <input type="text" class="form-control " id="specializare" name="specializare" pattern="^([^0-9]*)$" title="Folosiţi doar litere."><br>
+                    <label for="specializare">Specializare<span class="red-text"> </span></label>
+                </div>
+            </div>
+
+            
+    
+       
+            <div class="input-field col s12">
+                <textarea id="more" class="materialize-textarea" name="more" data-length="120"></textarea>
+                <label for="more">Doreşti să ne transmiţi ceva?</label>
+            </div>
+    
+          
+            <div class="submit">
+                <input type="checkbox" id="regulament" />
+                <label for="regulament">Am citit <a class ="md-trigger" data-modal="modala-regulament"><b>regulamentul.</b><span class="red-text"> *</span></a></label>
+            </div>
+            <div class="submit">
+                <input type="checkbox" id="gdpr" />
+                <label for="gdpr">Sunt de acord cu <a class ="md-trigger" data-modal="modala-GDPR"><b>regulamentul GDPR.</b><span class="red-text"> *</span></a></label>
+            </div>
+    
+            <div class="submit">
+                <input type="submit" name="submit" id="submit" class="btn btn-lg btn-primary btn-block verde" value="Înscriere">
+            </div>
+    
+
+
+        </form>
+        <div class="md-modal md-effect-3" id="modala-regulament">
+            <div class="md-content">
+                <div>
+                    <h3>1. Organizator</h3>
+                    <p><b>The Twelve</b>, Strada Virgil Madgearu, Calea Dorobanți 15-17, Sector 1, București, România.
+                    <br>Acest<b> regulament</b> se adresează și este valabil pentru fiecare persoană care se 
+                    înregistrează conform acestui <b>regulament</b> și dobândește calitatea de <b>participant</b>. 
+                    <br>Înregistrarea și participarea dumneavoastră la acest târg înseamnă și <b>acordul implicit</b> cu regulile de participare prezentate în acest formular.</br></p>
+                   
+                    <h3>2. Participare</h3> 
+                    <br>În cazul persoanelor care nu au <b>împlinit vârsta</b> de 18 ani, aceștea sunt obligate să fie însoțițe de un părinte/tutore, 
+                    însă ele pot colecta <b>doar</b> informații despre anumite job-uri, angajarea fiind <b>interzisă</b></p>
+ 
+                    
+                    <h3>3. Perioada de desfășurare</h3>
+                    <p>Perioada de desfășurare a târgului de joburi<b> "ITEco Job Fest"</b> este <b>13 - 14 noiembrie</b>, între orele <b>10:00</b> - <b>17:00</b>.</p>
+                   
+                    <h3>4. Înregistrarea și participarea</h3>
+                    <p><b>Înregistrarea </b>la acest eveniment se poate face doar prin intermediul acestui <b>formular</b> de înscriere.</p>
+                     •	Pentru a participa, utilizatorii trebuie să completeze <b>formularul</b>, până la data de 10 noiembrie.
+                    <br> •   Fiecare participant se poate înscrie cu un singur cont de <b>Facebook</b> în acest eveniment.
+                    <br> •   În cazul în care un participant își crează mai multe conturi, acest fapt va duce la anularea participării persoanei la eveniment. </b>
+                    <br> •   Utilizarea unui cont de Facebook care nu este <b>real</b> sau nu aparține <b>persoanei înregistrate</b> duce la <b>anularea</b> participării persoanei la eveniment.
+ 
+                    <h3>5. Condiții de participare</h3>
+                     •	Pentru a putea intra în această campanie, orice participant trebuie să folosească un profil de Facebook <b>real</b> / <b>valid</b>.
+                    <br> •  Pasul doi este acela de a răspunde corect la întrebarea / întrebările adresate de companiile participante la această competiție, pe pagina de <b>Facebook</b> (nume pagină) 
+                    
+                    <h3>6. General</h3>
+                        • Participarea la acest târg de joburi este <b>liberă</b> de orice plată sau taxă, <b>nu</b> se cere cumpărarea unor produse sau servicii.
+                    <br>• Datorită caracterului <b>liber</b> de participare, <b>fără</b> obligații financiare, toți participanții înțeleg și sunt de acord că organizatorul <b>nu </b>va fi răspunzător pentru niciun fel de pagube sau pierderi directe, 
+                    indirecte sau accidentale legate de această campanie de promovare și <b>nu</b> i se vor cere niciun fel de despăgubiri materiale sau morale.
+                    <br>• <b>Organizatorul</b> acestei promoții are dreptul de a descalifica participanții ce nu îndeplinesc sau încalcă regulile acestei promoții fără nicio avertizare prealabilă și fără oferirea niciunui fel de compensații.
+                    <br>• <b>Organizatorul</b> își rezervă <b>dreptul</b> de a întrerupe sau suspenda acest <b>eveniment</b> în cazul apariției unor cauze care <b>nu</b> țin de <b>controlul</b> acestuia.
+
+                </div>
+                <button class="md-close">Închide</button>
+            </div>
+        </div>
+    
+    
+        <div class="md-modal md-effect-3" id="modala-GDPR">
+            <div class="md-content">
+                <div>
+                    <h2>Acord privind prelucrarea datelor cu caracter personal</h2>
+                    <p>Deoarece asigurarea protecției dvs. în ceea ce privește prelucrare datelor cu caracter personal, reprezintă pentru noi un obiectiv extrem de important, am depus toate diligentele necesare pentru a ne conforma standardelor impuse prin Regulamentul UE 2016/679 (https://eur-lex.europa.eu/legal-content/ro/TXT/PDF/?uri=CELEX:32016R0679) și prin orice alt act normativ în vigoare pe teritoriul României.</p>
+                    <p>Un pas important pentru realizarea acestui obiectiv este reprezentat de informarea în legătura cu modul în care datele dumneavoastra vor fi prelucrate( prelucrare înseamnă orice operațiune sau set de operațiuni efectuate asupra datelor cu caracter personal sau asupra seturilor de date cu caracter personal, cu sau fără utilizarea de mijloace automatizate, cum ar fi colectarea, înregistrarea, organizarea, structurarea, stocarea, adaptarea sau modificarea, extragerea, consultarea, utilizarea, divulgarea prin transmitere, diseminarea sau punerea la dispoziție în orice alt mod, alinierea sau combinarea, restricționarea, ștergerea sau distrugerea).</p>
+                    <p>Ne rezervăm dreptul de a modifica și actualiza Politica de Confidențialitate și Politica de Cookie.</p>
+                    <h3>1. Cine suntem și modul în care putem fi contactați:</h3>
+                    <p>The Twelve este o organizație studențească, neguvernamentală, autonomă, independentă și nepartinică înființată în baza Legii nr. 21/1924 și a Legii 54/1991.</p>
+                    
+                    <p>The Twelve se constituie ca principalul partener studențesc și neguvernamental în raport cu structurile Facultății de Cibernetică, Statistică și Informatică Economică din cadrul Academiei de Studii Economice din București.</p>
+                    
+                    <p>The Twelve se constituie prin asocierea liberă a membrilor săi ca persoană juridică de drept privat fără scop patrimonial, în conformitate cu prevederile Legii 62/2011 și cu OG nr. 26/2000, completată prin OG nr. 37/2003.</p>
+                    
+                    <p>The Twelve se evidențiază printr-un reprezentant legal: <b>Renate-Mariä Bräuer.</b></p>
+                    
+                    <p><b>Adresă: Str. Frumoasă, nr. 31, sala 11</b></p>
+                    
+                    <p><b>Nr. de telefon: 0726807684</b></p>
+                    
+                    <p><b>E-mail: office@thetwelve.ro</b></p>
+                    
+                    <p><b>Pagina Facebook: <a href=”https://www.facebook.com/sisc.ase/”> https://www.facebook.com/sisc.ase/</a></b></p>
+                    
+                    
+                    <h3>2. Colectare date/ tipuri de date</h3><p>
+                    1.	Colectate automat în urma accesării (de tipul)</p><p>
+                    o	Adresă IP</p><p>
+                    o	Data și ora accesului</p><p>
+                    o	Conținutul cererii (website specific)</p><p>
+                    o	Starea accesului/codul de stare HTTP</p><p>
+                    o	Volumul de date transferat</p><p>
+                    o	Acces solicitat la website</p><p>
+                    o	Browser, setări de limbă, versiunea de browser, sistem de operare și suprafață</p><p>
+                    2.	Colectate în urma completării formularului de contact:</p><p>
+                    o	Nume și Prenume;</p><p>
+                    o	Adresă de email;</p><p>
+                    o	Unitatea de învățământ</p><p>
+                    o	Anul de studiu</p><p>
+                    o	Număr de telefon</p><p>
+                    o	CV</p>
+                    <h3>3. Fișierele cookie</h3>
+                    <p><b>Acest Website nu folosește așa-numitele „fișiere cookie”.</b></p>
+                    <h3>4. Scopul prelucrării datelor în vederea realizării proiectului ITEco Job Fest ediția 2020. </h3><p>
+                    1.	În vederea realizării unei comunicări cu dumneavoastră</p><p>
+                    2.	În cazul în care inițiați o comunicare cu noi, datele dumneavoastră vor fi stocate pentru perioada necesară realizării scopului în care ne-ați contactat sau până la momentul în care ne solicitați ștergerea datelor, oricare dintre aceste momente ar surveni primul;</p><p>
+                    3.	Pentru a vă putea oferi servicii special configurate nevoilor dumneavoastră</p><p>
+                    4.	În scopuri de marketing</p><p>
+                    5.	Putem utiliza informaţiile respective pentru îmbunătăţirea produselor şi serviciilor pe care vi le oferim;</p><p>
+                    6.	Pentru apărarea intereselor noastre legitime</p><p>
+                    7.	Pentru apărarea intereselor noastre legitime (În cazul unor situații excepționale precum atacuri cibernetice care pot periclita siguranța platformei noastre sau în cazul în care informațiile sunt solicitate de către instituțiile publice competente în vederea soluționării anchetelor în desfășurare, ne rezervăm dreptul de prelucra informațiile vizate).</p>
+                    
+                    <h3>5. Cât timp păstrăm datele dumneavoastră cu caracter personal</h3>
+                    <p>Durata de timp pentru care vor fi păstrate datele dumneavoastră este limitată și va fi determinate de perioada necesară îndeplinirii scopurilor în vederea cărora sunt prelucrate datele, această perioadă neputând să depășească 2 ani.</p>
+                    <h3>6. Terți</h3>
+                    <p>Accenture, Adobe, Orange, KPMG, Axway, HTSS, Suvoda, Essensys, EY </p>
+                    <p><b>Scop</b>: Trimiterea de materiale promoționale, accesul dumneavoastră la oferte de muncă și informații de interes.</p><p>
+                    <b>Mențiune:</b></p><p>
+                    1.	În cazul în care ne revine obligația legală sau dacă este necesar pentru a ne apăra un interes legitim, putem de asemenea divulga anumite date cu caracter personal unor autorități publice.</p><p>
+                    2.	Ne asigurăm că accesul la datele dvs. de către terții persoane juridice de drept privat se realizeaza în conformitate cu prevederile legale privind protecția datelor si confidențialitatea informațiilor, în baza unor contracte încheiate cu aceștia.</p>
+                    <h3>7. Teritorialitate:</h3>
+                    <p>Prelucrarea datelor se face <b>doar</b> pe teritoriul României. </p>
+                    <h3>8. Drepturile Dvs</h3>
+                    <p><b>Dreptul de acces al persoanei vizate</b></p>
+                    <p>(1)   Persoana vizată are dreptul de a obține din partea operatorului o confirmare că se prelucrează sau nu date cu caracter personal care o privesc și, în caz afirmativ, acces la datele respective și la următoarele informații:</p><p>
+                    1.	scopurile prelucrării;</p><p>
+                    2.	categoriile de date cu caracter personal vizate;</p><p>
+                    3.	destinatarii sau categoriile de destinatari cărora datele cu caracter personal le-au fost sau urmează să le fie divulgate, în special destinatari din țări terțe sau organizații internaționale;</p><p>
+                    4.	acolo unde este posibil, perioada pentru care se preconizează că vor fi stocate datele cu caracter personal sau, dacă acest lucru nu este posibil, criteriile utilizate pentru a stabili această perioadă; </p><p>
+                    5.	existența dreptului de a solicita operatorului rectificarea sau ștergerea datelor cu caracter personal ori restricționarea prelucrării datelor cu caracter personal referitoare la persoana vizată sau a dreptului de a se opune prelucrării;</p><p>
+                    6.	dreptul de a depune o plângere în fața unei autorități de supraveghere;</p>
+                    <p><b>Dreptul la rectificare</b></p>
+                    <p>(1)   Persoana vizată are dreptul de a obține de la operator, fără întârzieri nejustificate, rectificarea datelor cu caracter personal inexacte care o privesc. Ținându-se seama de scopurile în care au fost prelucrate datele, persoana vizată are dreptul de a obține completarea datelor cu caracter personal care sunt incomplete, inclusiv prin furnizarea unei declarații suplimentare.</p>
+                    <p><b>Dreptul la ștergerea datelor („dreptul de a fi uitat”)</b></p>
+                    <p>(1)   Persoana vizată are dreptul de a obține din partea operatorului ștergerea datelor cu caracter personal care o privesc, fără întârzieri nejustificate, iar operatorul are obligația de a șterge datele cu caracter personal fără întârzieri nejustificate în cazul în care se aplică unul dintre următoarele motive:</p>
+                    <p>(a) datele cu caracter personal nu mai sunt necesare pentru îndeplinirea scopurilor pentru care au fost colectate sau prelucrate;</p>
+                    <p>(b) persoana vizată își retrage consimțământul pe baza căruia are loc prelucrarea, în conformitate cu articolul 6 alineatul (1) litera (a) sau cu articolul 9 alineatul (2) litera (a), și nu există niciun alt temei juridic pentru prelucrarea;</p>
+                    <p>(c) persoana vizată se opune prelucrării în temeiul articolului 21 alineatul (1) și nu există motive legitime care să prevaleze în ceea ce privește prelucrarea sau persoana vizată se opune prelucrării în temeiul articolului 21 alineatul (2);</p>
+                    <p>(d) datele cu caracter personal au fost prelucrate ilegal;</p>
+                    <p>(e) datele cu caracter personal trebuie șterse pentru respectarea unei obligații legale care revine operatorului în temeiul dreptului Uniunii sau al dreptului intern sub incidența căruia se află operatorul;</p>
+                    <p>(f) datele cu caracter personal au fost colectate în legătură cu oferirea de servicii ale societății informaționale menționate la articolul 8 alineatul (1).</p>
+                    <p>(2)   În cazul în care operatorul a făcut publice datele cu caracter personal și este obligat, în temeiul alineatului (1), să le șteargă, operatorul, ținând seama de tehnologia disponibilă și de costul implementării, ia măsuri rezonabile, inclusiv măsuri tehnice, pentru a informa operatorii care prelucrează datele cu caracter personal că persoana vizată a solicitat ștergerea de către acești operatori a oricăror linkuri către datele respective sau a oricăror copii sau reproduceri ale acestor date cu caracter personal.</p>
+                    <p>(3)   Alineatele (1) și (2) nu se aplică în măsura în care prelucrarea este necesară:</p>
+                    <p>(a) pentru exercitarea dreptului la liberă exprimare și la informare;</p>
+                    <p>(b) pentru respectarea unei obligații legale care prevede prelucrarea în temeiul dreptului Uniunii sau al dreptului intern care se aplică operatorului sau pentru îndeplinirea unei sarcini executate în interes public sau în cadrul exercitării unei autorități oficiale cu care este învestit operatorul;</p>
+                    <p>(c) din motive de interes public în domeniul sănătății publice, în conformitate cu articolul 9 alineatul (2) literele (h) și (i) și cu articolul 9 alineatul (3);</p>
+                    <p>(d) în scopuri de arhivare în interes public, în scopuri de cercetare științifică sau istorică ori în scopuri statistice, în conformitate cu articolul 89 alineatul (1), în măsura în care dreptul menționat la alineatul (1) este susceptibil să facă imposibilă sau să afecteze în mod grav realizarea obiectivelor prelucrării respective; sau</p>
+                    <p>(e) pentru constatarea, exercitarea sau apărarea unui drept în instanță.</p>
+                    <p><b>Dreptul la restricționarea prelucrării</b></p>
+                    <p>(1)   Persoana vizată are dreptul de a obține din partea operatorului restricționarea prelucrării în cazul în care se aplică unul din următoarele cazuri:</p>
+                    <p>(a) persoana vizată contestă exactitatea datelor, pentru o perioadă care îi permite operatorului să verifice exactitatea datelor;</p>
+                    <p>(b) prelucrarea este ilegală, iar persoana vizată se opune ștergerii datelor cu caracter personal, solicitând în schimb restricționarea utilizării lor;</p>
+                    <p>(c) operatorul nu mai are nevoie de datele cu caracter personal în scopul prelucrării, dar persoana vizată i le solicită pentru constatarea, exercitarea sau apărarea unui drept în instanță; sau</p>
+                    <p>(d) persoana vizată s-a opus prelucrării în conformitate cu articolul 21 alineatul (1), pentru intervalul de timp în care se verifică dacă drepturile legitime ale operatorului prevalează asupra celor ale persoanei vizate.</p>
+                    <p>(2)   În cazul în care prelucrarea a fost restricționată în temeiul alineatului (1), astfel de date cu caracter personal pot, cu excepția stocării, să fie prelucrate numai cu consimțământul persoanei vizate sau pentru constatarea, exercitarea sau apărarea unui drept în instanță sau pentru protecția drepturilor unei alte persoane fizice sau juridice sau din motive de interes public important al Uniunii sau al unui stat membru.</p>
+                    <p>(3)   O persoană vizată care a obținut restricționarea prelucrării în temeiul alineatului (1) este informată de către operator înainte de ridicarea restricției de prelucrare.</p>
+                    <p><b>Dreptul la portabilitatea datelor</b></p>
+                    <p>(1)   Persoana vizată are dreptul de a primi datele cu caracter personal care o privesc și pe care le-a furnizat operatorului într-un format structurat, utilizat în mod curent și care poate fi citit automat și are dreptul de a transmite aceste date altui operator, fără obstacole din partea operatorului căruia i-au fost furnizate datele cu caracter personal, în cazul în care:</p>
+                    <p>(a) prelucrarea se bazează pe consimțământ în temeiul articolului 6 alineatul (1) litera (a) sau al articolului 9 alineatul (2) litera (a) sau pe un contract în temeiul articolului 6 alineatul (1) litera (b); și</p>
+                    <p>(b) prelucrarea este efectuată prin mijloace automate.</p>
+                    <p>(2)   În exercitarea dreptului său la portabilitatea datelor în temeiul alineatului (1), persoana vizată are dreptul ca datele cu caracter personal să fie transmise direct de la un operator la altul acolo unde acest lucru este fezabil din punct de vedere tehnic.</p>
+                    <p>(3)   Exercitarea dreptului menționat la alineatul (1) din prezentul articol nu aduce atingere articolului 17. Respectivul drept nu se aplică prelucrării necesare pentru îndeplinirea unei sarcini executate în interes public sau în cadrul exercitării unei autorități oficiale cu care este învestit operatorul.</p>
+                    <p>(4)   Dreptul menționat la alineatul (1) nu aduce atingere drepturilor și libertăților altora.</p>
+                    <p><b>Dreptul de a fi notificat în legătură cu rectificarea, ștergerea sau restricționarea prelucrării datelor cu caracter personal</b></p>
+                    <p>(1)   Operatorul comunică fiecărui destinatar căruia i-au fost divulgate datele cu caracter personal orice rectificare sau ștergere a datelor cu caracter personal sau restricționare a prelucrării efectuate în conformitate cu articolul 16, articolul 17 alineatul (1) și articolul 18, cu excepția cazului în care acest lucru se dovedește imposibil sau presupune eforturi disproporționate. Operatorul informează persoana vizată cu privire la destinatarii respectivi dacă persoana vizată solicită acest lucru.</p>
+                    <h2>9. Date colectate în cadrul evenimentului</h2>
+                    <p>Prin această notă dorim să vă informăm cu privire la:</p>
+                    <p>(i) scopurile pentru care colectăm și prelucrăm datele dvs. cu caracter personal;</p>
+                    <p>(ii) temeiul legal al prelucrării acestor date;</p>
+                    <p>(iii) categoriile de date pe care le colectăm de la dvs. și pe care le prelucrăm;</p>
+                    <p>(iv) durata prelucrării acestor date;</p>
+                    <p>(v) drepturile de care beneficiați în calitate de persoană vizată și modalitatea în care vi le poți exercita;</p>
+                    <p>(vi) cui dezvăluim datele dvs. cu caracter personal.</p>
+                    <p><b>Scopul pentru care sunt colectate și prelucrate datele</b></p>
+                    <p>Datele personale care ne sunt transmise prin intermediul CV-urilor și/sau care sunt disponibile pe platformele de specialitate (de exemplu, LinkedIn) sunt prelucrate în vederea participării  la evenimentul ITEco Job Fest 2020.</p>
+                    <p><b>Categoriile de date colectate și prelucrate</b></p>
+                    <p>Datele cu caracter personal pe care le prelucrăm sunt cele pe care ni le puneți la dispoziție în cadrul CV-ului și/sau care sunt disponibile pe platformele de specialitate și includ, printre altele: numele și prenumele, fotografia, adresa de domiciliu și/sau adresa de reședință, adresa de e-mail personală, numărul de telefon personal, data nașterii, sexul, starea civilă, naționalitatea, experiența profesională, studii, abilități și cunoștințe, precum și orice alte date cu caracter personal incluse în CV-ul pe care îl transmiteți.</p>
+                    <p>În măsura în care documentele pe care ni le transmiteți conțin și datele personale ale altor persoane fizice (de exemplu, persoane de contact pentru verificarea referințelor), vă rugăm să informați respectivele persoane anterior transmiterii către The Twelve a datelor lor personale cu privire la modalitatea în care datelor lor cu caracter personal vor fi prelucrate de către societate.</p>
+                    <p><b>Durata prelucrării acestor date</b></p>
+                    <p>Datele cu caracter personal pe care ni le puneți la dispoziție în cadrul CV-ului și/sau care sunt disponibile pe platformele de specialitate vor fi stocate și prelucrate pe durata desfășurării proiectului ITEco Job Fest 2020, urmând ca la finalul proiectului acestea să fie șterse.</p>
+                    <p><b>Securitatea prelucrării</b></p>
+                    <p>The Twelve va asigura securitatea prelucrării datelor dvs. începând cu momentul conceperii acestora prin implementarea unor măsuri tehnice și organizatorice adecvate.</p>
+                    <p>De asemenea, The Twelve vă va informa, fără întârzieri nejustificate, în cazul în care o eventuală încălcare a securității datelor este susceptibilă să genereze un risc ridicat pentru drepturile și libertățile dvs., cu excepția cazurilor indicate în art. 34 din Regulament.</p>
+                    <p><b>Drepturile de care beneficiați în calitate de persoană vizată</b></p>
+                    <p>În considerarea calității dvs. de persoană vizată, beneficiați de următoarele drepturi:</p><p>
+                    •	Dreptul de a fi informat cu privire la toate aspectele esențiale ale prelucrării de date;</p><p>
+                    •	Dreptul de acces la datele prelucrate și la o serie de informații, conform prevederilor legale, drept care vă permite să fiți informat dacă datele dvs. personale sunt prelucrate de noi , precum și cu privire la detaliile disponibile în acest sens (inclusiv dar fără a se limita la scopurile prelucrării, categoriile de date cu caracter personal vizate, destinatarii sau categoriile de destinatari cărora datele cu caracter personal le-au fost sau urmează să le fie divulgate etc.),  </p><p>
+                    •	Dreptul de a obține rectificarea și/sau completarea datelor personale, fără întârzieri nejustificate;</p><p>
+                    •	Dreptul de a obține ștergerea datelor personale, fără întârzieri nejustificate, în cazurile prevăzute de lege (de exemplu, atunci când datele cu caracter personal nu mai sunt necesare pentru îndeplinirea scopurilor pentru care au fost colectate sau prelucrate);</p><p>
+                    •	Dreptul de a obține restricționarea prelucrării în cazurile prevăzute de lege (de exemplu, atunci când contestați exactitatea datelor, pentru o perioadă care permite operatorului să verifice exactitatea datelor).</p><p>
+                    •	Dreptul la portabilitatea datelor Aveți dreptul de a obține date personale prelucrate într-un mod structurat, utilizat în mod curent și care poate fi citit automat în scopul de a transmite aceste date altui operator, fără obstacole din partea operatorului, în cazurile prevăzute de art. 20 din Regulament.</p><p>
+                    •	Dreptul la opoziție Aveți dreptul de a vă opune, din motive legate de situația dvs. particulară, prelucrării în temeiul interesului public sau al interesului legitim al operatorului sau în scopuri de marketing direct, inclusiv creării de profiluri pe baza respectivelor justificări, cu excepția prevăzute de art. 21 din Regulament.</p><p>
+                    •	Dreptul de a nu face obiectul unei decizii bazate exclusiv pe prelucrarea automată, în afara excepțiilor prevăzute de art. 22 din Regulament.</p><p>
+                    •	Dreptul de a depune o plângere în fața Autorităţii Naţionale de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP).</p><p>
+                    •	Dreptul la formula o  cale de atac, în fața instanțelor de judecată din România.</p>
+                    <h3>10. Dispoziții finale</h3>
+                    <p>Fără a vă afecta dreptul dumneavoastră de a contacta în orice moment autoritatea de supraveghere, puteți să ne contactați în prealabil la adresa de email office@thetwelve.ro și vom depune toate eforturile necesare pentru a rezolva orice problemă.</p>
+                    <p>Aveți dreptul să depuneți o plângere la autoritatea de supraveghere cu privire la prelucrarea datelor dvs. cu caracter personal. În România, datele de contact ale autorității de supraveghere pentru protecția datelor sunt următoarele:</p>
+                    <p>Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal</p>
+                    <p>B-dul G-ral. Gheorghe Magheru nr. 28-30, Sector 1, cod poștal 010336, București, Romania</p>
+                    <p>Telefon: +40.318.059.211 sau +40.318.059.212;</p>
+                    <p>E-mail:anspdcp@dataprotection.ro</p>
+                     
+                    
+                    
+     
+    
+    
+                        
+                </div>
+                <button class="md-close">Închide</button>
+            </div>
+    
+        </div>
+        <div class="md-overlay"></div>
+ </div>
+    
+ <!--        mesaj felicitare inscriere-->
+<div id="congrats" class="congrats">
+    <div class="upper-part">
+        <i class="material-icons large">check_circle</i>
+        <h1>Succes!</h1>
+    </div>
+    <div class="lower-part">
+        <p>Felicitări, te-ai înscris la eveniment!</p>
+        <p>Vei primi un mail cu mai multe detalii despre înscrierea ta.</p>
+    </div>
+</div>
+
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+     <script src="materialize.min.js"></script>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+     <script type="text/javascript" src="assets/js/script.js"> </script>
+
+<!--script modale-->
+       <!--Scripts modal-->
+       <script src="classie.js"></script>
+       <script src="modalEffects.js"></script>
+    
+       <!-- for the blur effect -->
+       <script>
+           // this is important for IEs
+           var polyfilter_scriptpath = '/js/';
+       </script>
+           <script src="Parser.js"></script>
+       <script src="css-filters-polyfill.js"></script>
+       
+</body>
+
+</html>
