@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="form.css" />
     <link href="https://fonts.googleapis.com/css?family=Cairo:400" rel="stylesheet"> 
+     <!-- Font Awesome CDN -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+     crossorigin="anonymous"
+   />
     <link rel="stylesheet" type="text/css" href="component.css" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" href="style.css" />
@@ -359,7 +366,7 @@
 <div id="congrats" class="congrats">
     <div class="upper-part">
         <i class="material-icons large">check_circle</i>
-        <h1>Succes!</h1>
+        <h1 style= "color:white">Succes!</h1>
     </div>
     <div class="lower-part">
         <p>Felicitări, te-ai înscris la eveniment!</p>
@@ -367,6 +374,26 @@
     </div>
 </div>
 
+<footer class="footer">
+    <div class="container-footer">
+      <a href="index.html" class="logo">
+        <h2 style="color: white">ITEco Job Fest</h2>
+        <span style="color: white">.</span>
+      </a>
+      <p class="copyright">
+        Copyright &copy; 2020 by The Twelve. All rights reserved.
+      </p>
+      <div>
+        <a href="https://www.facebook.com" target="_blank"
+          ><i class="fab fa-facebook-square footer-icon"></i>
+        </a>
+        <a href="https://www.instagram.com/"
+          ><i class="fab fa-instagram footer-icon"></i
+        ></a>
+      </div>
+    </div>
+  </footer>
+  
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
      <script src="materialize.min.js"></script>
@@ -383,9 +410,9 @@
            // this is important for IEs
            var polyfilter_scriptpath = '/js/';
        </script>
-           <script src="Parser.js"></script>
-       <script src="css-filters-polyfill.js"></script>
-       
-</body>
+       <script src="Parser.js"></script>           
+       <script src="css-filters-polyfill.js"></script>  
+       <script src="app.js"></script>
 
+    </body>
 </html>
